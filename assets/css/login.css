@@ -1,0 +1,224 @@
+.breadcrumb-area {
+    height: 68vh !important;
+    position: relative;           /* ضروري عشان نقدر نستخدم ::before */
+    background-image: url('../img/registor-bg.jpg');  /* صورة الخلفية */
+    background-size: cover;       /* الصورة تغطي كل العنصر */
+    background-position: center;  /* تركيز الصورة في الوسط */
+    background-repeat: no-repeat; /* ما تتكرر الصورة */
+    padding-top: 250px;           /* مسافة فوق عشان ارتفاع القسم */
+    padding-bottom: 130px;        /* مسافة تحت */
+    margin-bottom: 120px;         /* مسافة أسفل القسم */
+    z-index: 9;                   /* ترتيب الطبقات */
+  }
+  
+  /* طبقة التعتيم فوق الخلفية */
+  .breadcrumb-area::before {
+    content: "";                  /* لازم نضيف المحتوى عشان يظهر العنصر */
+    position: absolute;           /* يثبت فوق العنصر */
+    top: 0;                      /* من الأعلى */
+    left: 0;                     /* من اليسار */
+    width: 100%;                 /* تغطي كامل العرض */
+    height: 100%;                /* تغطي كامل الطول */
+    background-color: rgba(7, 28, 31, 1);  /* لون أسود مع شفافية 90% */
+    opacity: 0.9;                /* شفافية */
+    z-index: -1;     
+                /* تحت المحتوى الأساسي لكن فوق الخلفية */
+  }
+  
+.breadcrumb-area-title h6 {
+    color: var(--secondary-color);
+   text-transform: uppercase;
+    font-weight: 700;
+}
+.breadcrumb-area-title h1 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: 700;
+}
+.breadcrumb-list{
+    margin-top:40px;
+  list-style: none;
+}
+.breadcrumb-list li {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.breadcrumb-list-link1 {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif    ;
+  color: rgb(140, 178, 178)  ;
+}
+.breadcrumb-list-link1:hover {
+    color: var(--secondary-color);
+    transition: all 0.5s ease;
+}
+.breadcrumb-list-link2 {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif    ;
+  color: var(--secondary-color);
+}
+
+.breadcrumb-list ul li {
+    position: relative;
+    display: inline-block;
+    padding-right: 25px;
+  }
+  
+  .breadcrumb-list ul li:not(:last-child):after {
+    position: absolute;
+    content: "";
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 10px;
+    width: 2.5px;
+    background-color:#8cb2b2;
+    opacity: 0.5;
+  }
+  /* scroll up */
+  #scrollUp {
+    position: fixed;
+    display: none;
+    background-color:#F7F5EB;
+    color: black;
+    bottom: 70px;
+    font-size: 15px;
+
+    height: 40px;
+    width: 40px;
+    right: 3%;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0 1px 6px 0 rgba(54, 56, 61, 0.15);
+    z-index: 9999;
+}
+#scrollUp i {
+      font-weight: 900;
+    line-height: 40px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#scrollUp:hover {
+    background-color: var(--secondary-color);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+
+.login-title h1 {
+    margin-bottom: 5px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.login-title p{
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.login-form, .login-side {
+    max-width: 470px;
+}
+.login-form {
+    margin: auto;
+}
+.login-form h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.login-form h3 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.login-form input {
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    padding: 19px;
+    margin-bottom: 25px;
+    border: 2px solid #e4ecf2;
+    outline: none;
+}
+.login-form input:focus {
+    border: 1px solid var(--secondary-color);
+}
+.login-form input::placeholder {
+    font-family: "Open Sans", sans-serif;
+    color: #767676;
+    opacity: 0.5;
+}
+input[type="password"] {
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+.login-form button {
+    display: block;
+    background: var(--secondary-color);
+    color: white;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    width: 130px;
+}
+.login-form a{
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color:#071c1f;
+    font-family:"Open Sans", sans-serif !important;
+}
+.login-form a:hover{
+    color: var(--secondary-color);
+    transition: all 0.5s ease;
+}   
+
+.login-form button:hover {
+    background: #071c1f;
+    transition: all 0.5s ease;
+}
+
+.login-side {
+    padding: 20px;
+}
+.login-side p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: "Open Sans", sans-serif;
+}
+
+.login-side h4 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.login-side button {
+    background: var(--secondary-color);
+    color: white;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.login-side button:hover {
+    background: #071c1f;
+    transition: all 0.5s ease;
+}
+
